@@ -1,12 +1,12 @@
-def es_bisiesto(año):
-   
-    if año % 400 == 0:
-        return True
-    elif año % 100 == 0:
-        return False
-    elif año % 4 == 0:
-        return True
+año = int(input("Ingrese el año:"))
+año_actual = 2024
+
+def abisiesto(año):
+    if (año % 4 == 0) and (año % 100 !=0):
+        print("El año escrio es bisiesto")
+    elif (año % 100 == 0) and (año % 400 == 0):
+        print("El año ingresado es bisiesto")
     else:
-        return False
-    
-print("Ingrese el año:", es_bisiesto)
+        print("El año ingresado no es bisiesto")
+
+abisiesto(año)
